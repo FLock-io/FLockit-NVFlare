@@ -1,0 +1,16 @@
+torch
+torchvision
+loguru
+omegaconf
+transformers
+psutil
+datasets
+flock_sdk
+peft
+trl
+bitsandbytes
+boto3
+scikit-learn
+
+nvflare == 2.5.0
+tensorboard

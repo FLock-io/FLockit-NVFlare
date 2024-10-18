@@ -1,0 +1,47 @@
+common_args:
+  template_name: "llm_finetuning"
+  project_name: "FLockLLM_finetune"
+
+data_args:
+  data_path: "/dataset.json"
+
+model_args:
+  foundation_model_name: "meta-llama/Meta-Llama-3.1-8B," # meta-llama/Meta-Llama-3.1-8B, Qwen/Qwen2-7B, google/gemma-2-2b, mistralai/Mistral-7B-v0.1,
+  foundation_model_source: "huggingface" # Options: "huggingface", "flock_s3" Defaults: "huggingface"
+  finetune_adapter: "qlora"
+  lora_dropout: 0.05
+  lora_target_modules: [] # Options: "q_proj","k_proj","v_proj","o_proj" Defaults: [] (let system auto search)
+
+train_args:
+  proposer_train_batch_size: 32
+  proposer_train_micro_batch_size: 8
+  proposer_num_epochs: 1
+  proposer_learning_rate: 0.0003
+  proposer_val_set_size: 16
+  proposer_save_steps: 3
+  proposer_train_group_by_length: false
+  proposer_train_optimizer_name: "paged_adamw_8bit"
+  proposer_train_lr_scheduler_type: "constant"
+  proposer_train_warmup_steps: 1
+  proposer_train_weight_decay: 0.05
+  block_size: 8
+  cutoff_len: 1024
+  federated_optimizer_name: "fedavg"
+  device_map: "cuda:0"
+
+evaluation_args:
+  voter_val_set_size: 5
+
+tracking_args:
+  out_put_root: "output"
+  finetune_adapter_checkpoint_save_dir: "checkpoints/llama-3.1-8b"
+  proposer_train_gradient_checkpointing: true
+  proposer_train_logging_steps: 10
+  proposer_model_save_steps: 40
+  save_total_limit: 3
+
+nvflare_args:
+  # Notice: For everytime start a simulation, the simulator will wipe eveything in the workspace
+  nvflare_workspace: "/tmp/nvflare/jobs/workdir"
+  nvflare_executor_name: "flockit"
+  nvflare_output_dir: "/tmp/nvflare/"
