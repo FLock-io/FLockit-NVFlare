@@ -10,23 +10,17 @@ By integrating NVFlare as the backend, you can:
 
 ## Use Cases
 
+### Peer-to-Peer (P2P) Blockchain-Enabled Federated Learning for Decentralized AI Marketplaces
+
+FLockit and NVFlare enable decentralized AI marketplaces where participants can collaboratively fine-tune LLMs. Blockchain ensures transparency and secure transactions, while federated learning allows entities to contribute data and computing power without exposing raw data. This marketplace fosters decentralized AI model improvements through collective contributions. For example, in decentralized finance (DeFi), platforms can collaborate on fraud detection models while maintaining privacy and ensuring trust through blockchain validation.
+
+### B2B Blockchain-Based Federated Learning for Supply Chain Optimization
+
+In supply chain optimization, FLockit and NVFlare create a decentralized, blockchain-based platform for businesses to fine-tune models collaboratively. Companies share encrypted model updates, improving operations such as demand forecasting and inventory management. Blockchain provides transparency and accountability, while federated learning protects proprietary data, ensuring efficient collaboration without exposing sensitive information. This integrated solution optimizes supply chain operations and enhances trust, innovation, and predictive capabilities.
+
 ### Healthcare and Medical Research (Two-Tier Federated Learning)
 
-In the medical field, privacy, security, and collaboration are paramount, especially when dealing with sensitive patient data. FLockit-NVFlare’s two-tier federated learning architecture enables hospitals and medical institutions to securely collaborate at multiple levels.
-
-**First Tier: Decentralized Federated Learning Across Institutions (Blockchain-Based)**
-
-At the highest level, hospitals or medical institutions can collaborate across regions or countries without relying on a central authority. This decentralized federated learning is secured through blockchain technology, ensuring trust, transparency, and immutability. Each hospital maintains its own data locally and shares only model updates, which are aggregated in a decentralized manner via the FLock platform.
-
-For example, several hospitals from different countries can collaborate to fine-tune a large language model (LLM) for diagnostic support, using local patient data. The blockchain ensures that the collaboration process is transparent and auditable, without the need for a central party. This prevents single points of failure and reinforces the privacy of sensitive data across institutions.
-
-**Second Tier: Internal Federated Learning (Centralized Aggregation)**
-
-Within each institution or between closely collaborating hospitals that have a high level of trust, a traditional centralized federated learning setup can be used. In this layer, a central server aggregates model updates from multiple departments, labs, or clinics within the same organization, or between trusted partner hospitals. This allows for more efficient training and coordination while still keeping the raw data local.
-
-For instance, within a hospital network that spans multiple campuses, the institutions may have established trust relationships that enable them to fine-tune models jointly using internal federated learning. The central server coordinates model updates from different campuses without the need for blockchain, allowing for faster iteration while maintaining privacy within the network. These updates can then be shared with the broader decentralized network via the first tier, contributing to the global model improvement.
-
-This two-tier structure ensures both internal efficiency and external security, combining the trust of centralized learning within trusted collaborators and the transparency and security of decentralized learning between institutions.
+FLockit-NVFlare’s two-tier architecture allows hospitals to collaborate securely at different levels. **First Tier:** Institutions can engage in decentralized federated learning across regions, using blockchain for trust and transparency. Hospitals collaborate on fine-tuning LLMs using local patient data, ensuring privacy through decentralized aggregation. **Second Tier:** Within trusted networks, hospitals use centralized aggregation for more efficient internal collaboration, with model updates shared across campuses. This two-tier structure ensures secure, efficient collaboration for model improvement, combining decentralized and centralized learning.
 
 ## Quick Start
 
