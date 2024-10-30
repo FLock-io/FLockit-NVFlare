@@ -8,6 +8,20 @@ By integrating NVFlare as the backend, you can:
 2. **On-demand LLM loading**: Pre-trained LLMs are loaded into GPU memory only when a task arrives, optimizing resource usage.
 3. **Manage your own federation for hierarchical and hybrid federated learning**: Use NVFlare to manage a centralized federation with your trusted collaborators to leverage their data and improve your local model's performance. Simultaneously, utilize your competitive local model with the FLock platform to achieve decentralized federated learning and gain more rewards.
 
+## Use Cases
+
+### Peer-to-Peer (P2P) Blockchain-Enabled Federated Learning for Decentralized AI Marketplaces
+
+FLockit and NVFlare enable decentralized AI marketplaces where participants can collaboratively fine-tune LLMs. Blockchain ensures transparency and secure transactions, while federated learning allows entities to contribute data and computing power without exposing raw data. This marketplace fosters decentralized AI model improvements through collective contributions. For example, in decentralized finance (DeFi), platforms can collaborate on fraud detection models while maintaining privacy and ensuring trust through blockchain validation.
+
+### B2B Blockchain-Based Federated Learning for Supply Chain Optimization
+
+In supply chain optimization, FLockit and NVFlare create a decentralized, blockchain-based platform for businesses to fine-tune models collaboratively. Companies share encrypted model updates, improving operations such as demand forecasting and inventory management. Blockchain provides transparency and accountability, while federated learning protects proprietary data, ensuring efficient collaboration without exposing sensitive information. This integrated solution optimizes supply chain operations and enhances trust, innovation, and predictive capabilities.
+
+### Healthcare and Medical Research (Two-Tier Federated Learning)
+
+FLockit-NVFlare’s two-tier architecture allows hospitals to collaborate securely at different levels. **First Tier:** Institutions can engage in decentralized federated learning across regions, using blockchain for trust and transparency. Hospitals collaborate on fine-tuning LLMs using local patient data, ensuring privacy through decentralized aggregation. **Second Tier:** Within trusted networks, hospitals use centralized aggregation for more efficient internal collaboration, with model updates shared across campuses. This two-tier structure ensures secure, efficient collaboration for model improvement, combining decentralized and centralized learning.
+
 ## Quick Start
 
 By default, the foundation model for fine-tuning is set to **LLaMa 3.1 8B**. However, you can easily modify the configuration file [`conf.yaml`](templates/llm_finetuning/configs/conf.yaml) based on the parameter descriptions provided within the same file.
